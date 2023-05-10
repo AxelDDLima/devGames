@@ -1,6 +1,7 @@
 package com.devsuperior.games.dto;
 
 import com.devsuperior.games.entities.Jogo;
+import com.devsuperior.games.projections.JogoMinProjection;
 
 //Classe que transporta os dados para o front-end
 public class JogoMinDTO {
@@ -12,13 +13,21 @@ public class JogoMinDTO {
 	private String descricaoCurta;
 
 	public JogoMinDTO(Jogo param) {
-		super();
-		this.id = param.getId();
-		this.titulo = param.getTitulo();
-		this.genero = param.getGenero();
-		this.score = param.getScore();
-		this.imgUrl = param.getImgUrl();
-		this.descricaoCurta = param.getDescricaoCurta();
+		id = param.getId();
+		titulo = param.getTitulo();
+		genero = param.getGenero();
+		score = param.getScore();
+		imgUrl = param.getImgUrl();
+		descricaoCurta = param.getDescricaoCurta();
+	}
+	
+	public JogoMinDTO(JogoMinProjection param) {
+		id = param.getId();
+		titulo = param.getTitulo();
+		genero = param.getGenero();
+		score = param.getScore();
+		imgUrl = param.getImgUrl();
+		descricaoCurta = param.getDescricaoCurta();
 	}
 
 	public Long getId() {

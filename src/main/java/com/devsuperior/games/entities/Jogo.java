@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 //Anotação para mapear que é uma tabela
 @Entity
 //Anotação para mudar o nome da tabela
-@Table(name = "JOGO")
+@Table(name = "TB_JOGO")
 public class Jogo {
 	
 	@Id
@@ -88,6 +88,7 @@ public class Jogo {
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -99,6 +100,4 @@ public class Jogo {
 		Jogo other = (Jogo) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 }
